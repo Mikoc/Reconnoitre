@@ -19,7 +19,6 @@ def main():
     parser.add_argument("--snmp",       dest="perform_snmp_walk", action="store_true", help="Perform service scan over targets.", default=False)
     parser.add_argument("--quick",      dest="quick",   action="store_true", required=False, help="Move to the next target after performing a quick scan and writing first-round recommendations.", default=False)    
     parser.add_argument("--quiet",      dest="quiet",   action="store_true", help="Supress banner and headers to limit to comma dilimeted results only.", default=False)
-    parser.add_argument("--exec",       dest="follow",  action="store_true", help="Execute shell comamnds from recommendations as they are discovered. Likely to lead to very long execute times depending on the wordlist being used.", default=False)
     parser.add_argument("--simple_exec",dest="quickfollow",  action="store_true", help="Execute non-brute forcing shell comamnds only as they are discovered.", default=False)
     arguments = parser.parse_args()
 
